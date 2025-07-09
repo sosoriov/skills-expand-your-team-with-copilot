@@ -6,8 +6,9 @@ try:
     from pymongo import MongoClient
     from argon2 import PasswordHasher
 
-    # Connect to MongoDB
-    client = MongoClient('mongodb://localhost:27017/')
+    # Try to connect to MongoDB
+    client = MongoClient('mongodb://localhost:27017/', serverSelectionTimeoutMS=1000)
+    client.server_info()  # This will raise an exception if MongoDB is not available
     db = client['mergington_high']
     activities_collection = db['activities']
     teachers_collection = db['teachers']

@@ -89,7 +89,7 @@ body:
     attributes:
       label: Error Messages
       description: If you see any error messages, copy them exactly here
-      placeholder: e.g., "Error 500: Internal Server Error", "Failed to update activity", "Authentication required for this action"
+      placeholder: 'e.g., "Error 500: Internal Server Error", "Failed to update activity", "Authentication required for this action"'
 
   - type: input
     id: teacher_account

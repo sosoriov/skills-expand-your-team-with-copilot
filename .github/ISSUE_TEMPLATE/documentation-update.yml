@@ -1,0 +1,136 @@
+name: 📚 Documentation Update
+description: Request updates to documentation, help text, or instructional content
+title: "[DOCS] "
+labels: ["documentation"]
+assignees:
+  - Copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need to update documentation, add help text, or improve instructions? Let our Copilot coding agent handle it for you.
+
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: Type of Documentation
+      description: What kind of documentation needs to be updated?
+      options:
+        - README files
+        - API documentation
+        - User guides/instructions
+        - Developer setup guides
+        - Help text in the application
+        - Comments in code
+        - Other documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_problem
+    attributes:
+      label: Current Documentation Problem
+      description: What's wrong with the current documentation?
+      placeholder: e.g., "The README in src/ folder is outdated and doesn't match current features", "There's no help text explaining how teachers log in", "API docs are missing new endpoints"
+    validations:
+      required: true
+
+  - type: textarea
+    id: needed_changes
+    attributes:
+      label: Needed Changes
+      description: Describe exactly what needs to be updated, added, or removed
+      placeholder: e.g., "Update feature list to include teacher authentication and student registration", "Add step-by-step login instructions", "Document the new activity management endpoints"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target_audience
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
+      options:
+        - Teachers using the system
+        - Students using the system
+        - Administrators managing the system
+        - Developers working on the code
+        - General users
+        - Multiple audiences
+    validations:
+      required: true
+
+  - type: input
+    id: specific_files
+    attributes:
+      label: Specific Files or Locations
+      description: If you know which files need updating, list them here
+      placeholder: e.g., "src/README.md", "docs/api.md", "Help section on login page"
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: Current Content (if applicable)
+      description: If updating existing content, paste the current text that needs changing
+      placeholder: Paste current documentation text here...
+
+  - type: textarea
+    id: suggested_content
+    attributes:
+      label: Suggested New Content
+      description: If you have specific text you'd like to use, provide it here
+      placeholder: e.g., "## Teacher Login \n\n1. Click the 'Teacher Login' button in the top right \n2. Enter your username and password..."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How urgent is this documentation update?
+      options:
+        - High - Users are frequently confused without this documentation
+        - Medium - Would help users understand the system better
+        - Low - Nice to have improvement
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: doc_requirements
+    attributes:
+      label: Documentation Requirements
+      options:
+        - label: Should be written in clear, simple language
+        - label: Should include examples where helpful
+        - label: Should be kept up-to-date with future changes
+        - label: Should include troubleshooting information
+        - label: Should include screenshots or diagrams if applicable
+
+  - type: textarea
+    id: related_features
+    attributes:
+      label: Related Features or Context
+      description: What features or functionality is this documentation related to?
+      placeholder: e.g., "Teacher authentication system", "Student registration process", "Activity filtering and search"
+
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success Criteria
+      description: How will we know this documentation is complete and helpful?
+      placeholder: e.g., "Teachers can follow the instructions without asking for help", "New developers can set up the project using the updated guide"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens next?
+        
+        Once you submit this issue, a Copilot coding agent will:
+        1. Review the current documentation and identify gaps
+        2. Research the current system functionality to ensure accuracy
+        3. Write or update the documentation in clear, user-friendly language
+        4. Add examples, screenshots, or diagrams as needed
+        5. Ensure the documentation is properly formatted and organized
+        6. Test the documentation with the actual system
+        7. Update you when complete
+        
+        **Expected completion time:** 30 minutes to 2 hours depending on complexity
+        
+        **Note:** We'll ensure all documentation is accurate and reflects the current state of the system.

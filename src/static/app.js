@@ -314,6 +314,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name.includes("basketball") ||
       name.includes("sport") ||
       name.includes("fitness") ||
+      name.includes("team") ||
       desc.includes("team") ||
       desc.includes("game") ||
       desc.includes("athletic")

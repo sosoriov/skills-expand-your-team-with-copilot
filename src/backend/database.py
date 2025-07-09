@@ -174,6 +174,17 @@ initial_activities = {
         },
         "max_participants": 15,
         "participants": []
+    },
+    "Poker team": {
+        "description": "Kids must learn how to play poker",
+        "schedule": "Tuesdays, 3:30 PM - 5:30 PM",
+        "schedule_details": {
+            "days": ["Tuesday"],
+            "start_time": "15:30",
+            "end_time": "17:30"
+        },
+        "max_participants": 6,
+        "participants": []
     }
 }
 
@@ -188,6 +199,12 @@ initial_teachers = [
         "username": "mchen",
         "display_name": "Mr. Chen",
         "password": hash_password("chess456"),
+        "role": "teacher"
+    },
+    {
+        "username": "mstien",
+        "display_name": "Ms. Stien",
+        "password": hash_password("poker123"),
         "role": "teacher"
     },
     {

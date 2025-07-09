@@ -1,0 +1,136 @@
+name: 🚀 New Feature Request
+description: Request new functionality or capabilities for the activities system
+title: "[FEATURE] "
+labels: ["enhancement", "new-feature"]
+assignees:
+  - Copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for new functionality? Describe your feature request below and our Copilot coding agent will evaluate and potentially implement it.
+
+  - type: input
+    id: feature_name
+    attributes:
+      label: Feature Name
+      description: What would you call this new feature?
+      placeholder: e.g., "Calendar View", "Student Waitlist", "Activity Reports"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? Why is it needed?
+      placeholder: e.g., "Teachers need to see all activities on a calendar to identify scheduling conflicts", "Students want to join a waitlist when activities are full"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how this feature should work from the user's perspective
+      placeholder: e.g., "Add a calendar view toggle that shows activities in a weekly calendar format with time slots", "When an activity is full, show a 'Join Waitlist' button instead of 'Register'"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user_type
+    attributes:
+      label: Primary Users
+      description: Who would primarily use this feature?
+      options:
+        - Students
+        - Teachers
+        - Administrators
+        - All users
+        - Depends on implementation
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature_complexity
+    attributes:
+      label: Estimated Complexity
+      description: How complex do you think this feature would be to implement?
+      options:
+        - Simple - Minor UI change or small addition
+        - Moderate - New UI components or basic backend changes
+        - Complex - Significant new functionality or database changes
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know when this feature is complete and working correctly?
+      placeholder: e.g., "✓ Calendar view displays all activities in correct time slots ✓ Can switch between card and calendar view ✓ Calendar is responsive on mobile ✓ Activities show enrollment numbers"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed_requirements
+    attributes:
+      label: Detailed Requirements
+      description: Any specific requirements, edge cases, or implementation details?
+      placeholder: e.g., "Should handle overlapping activities", "Need export functionality", "Must integrate with existing search/filter"
+
+  - type: input
+    id: similar_examples
+    attributes:
+      label: Similar Examples
+      description: Are there other websites or apps that have this feature implemented well?
+      placeholder: e.g., "Google Calendar", "GitHub project boards", "Canvas course scheduler"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Business Priority
+      description: How important is this feature for the school?
+      options:
+        - Critical - Needed for daily operations
+        - High - Would significantly improve user experience
+        - Medium - Nice to have enhancement
+        - Low - Future consideration
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: considerations
+    attributes:
+      label: Important Considerations
+      options:
+        - label: This feature should work on both desktop and mobile devices
+        - label: This feature should be accessible to users with disabilities
+        - label: This feature may require changes to the database structure
+        - label: This feature should integrate with existing authentication/permissions
+        - label: This feature may need administrator configuration options
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Are there other ways to solve this problem? What workarounds exist now?
+      placeholder: e.g., "Currently teachers use external calendars", "Manual coordination through email", "Spreadsheet tracking"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens next?
+        
+        Once you submit this issue, a Copilot coding agent will:
+        1. Analyze the technical feasibility of the feature
+        2. Estimate the development effort required
+        3. Create an implementation plan with milestones
+        4. Either implement the feature or provide feedback on why it may not be feasible
+        5. Test the implementation thoroughly
+        6. Update you with progress and completion
+        
+        **Expected completion time:** Varies greatly based on complexity (1 hour to several days)
+        
+        **Note:** Complex features may be implemented in phases. We'll provide updates on the implementation approach.

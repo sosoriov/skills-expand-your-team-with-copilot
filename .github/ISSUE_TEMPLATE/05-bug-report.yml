@@ -1,0 +1,151 @@
+name: 🐛 Bug Report
+description: Report an issue or something that's not working correctly
+title: "[BUG] "
+labels: ["bug"]
+assignees:
+  - Copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found something that's broken or not working as expected? Report it here and our Copilot coding agent will investigate and fix it.
+
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Bug Description
+      description: Clearly describe what's happening that shouldn't be happening
+      placeholder: e.g., "When I try to register a student for Chess Club, I get an error message", "The activity cards don't display correctly on mobile phones"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: e.g., "The student should be successfully registered and appear in the participants list", "Activity cards should be properly sized and readable on mobile"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide step-by-step instructions to reproduce this bug
+      placeholder: |
+        1. Go to the activities page
+        2. Click on 'Register' for Chess Club
+        3. Enter student email: student@mergington.edu
+        4. Click 'Register' button
+        5. See error message appear
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Bug Severity
+      description: How severe is this issue?
+      options:
+        - Critical - System is completely broken or unusable
+        - High - Major functionality is broken
+        - Medium - Some functionality is impaired but workarounds exist
+        - Low - Minor issue or cosmetic problem
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_users
+    attributes:
+      label: Who is Affected?
+      description: Which users are experiencing this issue?
+      options:
+        - All users
+        - Students only
+        - Teachers only
+        - Administrators only
+        - Only certain users (explain in additional info)
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device_type
+    attributes:
+      label: Device/Browser Information
+      description: Where did you notice this bug?
+      options:
+        - Desktop computer (Chrome, Firefox, Safari, Edge)
+        - Mobile phone (iOS Safari, Android Chrome)
+        - Tablet (iOS Safari, Android Chrome)
+        - Multiple devices
+        - Not device-specific
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_messages
+    attributes:
+      label: Error Messages
+      description: If you see any error messages, copy them exactly here
+      placeholder: 'e.g., "Error 500: Internal Server Error", "Failed to update activity", "Authentication required for this action"'
+
+  - type: input
+    id: teacher_account
+    attributes:
+      label: Teacher Account Used
+      description: If this involves teacher functionality, which teacher account were you using?
+      placeholder: e.g., "mrodriguez", "mchen", "principal"
+
+  - type: input
+    id: activity_involved
+    attributes:
+      label: Activity Involved
+      description: If this bug is related to a specific activity, which one?
+      placeholder: e.g., "Chess Club", "Programming Class", "Debate Team"
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help us understand and fix this bug
+      placeholder: e.g., "This started happening after the last update", "Only happens with certain student email addresses", "Screenshot attached"
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact Assessment
+      options:
+        - label: This is preventing daily operations
+        - label: Students/teachers are frustrated by this issue
+        - label: There are workarounds available
+        - label: This affects data integrity or security
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Current Workaround
+      description: If you've found a way to work around this issue, please describe it
+      placeholder: e.g., "We're currently registering students manually via email", "Using a different browser seems to work"
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens next?
+        
+        Once you submit this issue, a Copilot coding agent will:
+        1. Reproduce the bug using your provided steps
+        2. Investigate the root cause in the code
+        3. Develop and test a fix
+        4. Deploy the fix to resolve the issue
+        5. Verify the fix works as expected
+        6. Update you when the bug is resolved
+        
+        **Expected resolution time:** 
+        - Critical bugs: Within 2 hours
+        - High severity: Within 1 business day  
+        - Medium severity: Within 2-3 business days
+        - Low severity: Within 1 week
+        
+        **Note:** If we can't reproduce the issue, we may ask for additional information or screenshots.

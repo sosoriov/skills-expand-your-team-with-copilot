@@ -1,0 +1,115 @@
+name: 🎨 UI/Visual Enhancement
+description: Request visual improvements, design changes, or user interface enhancements
+title: "[UI] "
+labels: ["enhancement", "ui/ux", "frontend"]
+assignees:
+  - Copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want to improve how the website looks or works? Describe your visual enhancement request below and our Copilot coding agent will implement it.
+
+  - type: dropdown
+    id: change_type
+    attributes:
+      label: Type of Visual Change
+      description: What kind of visual enhancement are you requesting?
+      options:
+        - Color scheme/theme changes
+        - Layout improvements
+        - Add dark mode
+        - Font or typography changes
+        - Button or form styling
+        - Navigation improvements
+        - Animation or interactive effects
+        - Responsive design fixes
+        - Accessibility improvements
+        - Other visual enhancement
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_issue
+    attributes:
+      label: Current Problem/Situation
+      description: Describe what currently exists and why it needs to be changed
+      placeholder: e.g., "The website uses blue colors but our school colors are white and lime green", "Students find the interface too bright", "The navigation is confusing on mobile devices"
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_outcome
+    attributes:
+      label: Desired Visual Outcome
+      description: Describe exactly how you want it to look or behave after the change
+      placeholder: e.g., "Change primary colors to white background with lime green accents", "Add a dark theme toggle button in the top right", "Reorganize the filters to be more intuitive"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this change?
+      options:
+        - High - Students/teachers frequently complain about this
+        - Medium - It would be a nice improvement
+        - Low - Just a suggestion for when time allows
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific_requirements
+    attributes:
+      label: Specific Requirements or Constraints
+      description: Any specific colors, fonts, sizes, or other requirements?
+      placeholder: e.g., "Use hex color #32CD32 for lime green", "Must work on both desktop and mobile", "Keep existing functionality intact"
+
+  - type: input
+    id: reference_examples
+    attributes:
+      label: Reference Examples
+      description: Any websites, images, or examples that show what you're looking for?
+      placeholder: e.g., "Like the GitHub dark mode", "Similar to bootstrap's card layout", "https://example.com/design"
+
+  - type: checkboxes
+    id: affected_areas
+    attributes:
+      label: Which areas of the website should be affected?
+      description: Select all that apply
+      options:
+        - label: Header/navigation
+        - label: Activity cards
+        - label: Filter sidebar
+        - label: Login forms
+        - label: Registration modals
+        - label: Footer
+        - label: Overall layout
+        - label: Mobile responsive design
+
+  - type: checkboxes
+    id: accessibility
+    attributes:
+      label: Accessibility Considerations
+      options:
+        - label: This change should maintain or improve accessibility for students with disabilities
+        - label: Color choices should have sufficient contrast for readability
+        - label: Any animations should be optional or reduced for motion-sensitive users
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens next?
+        
+        Once you submit this issue, a Copilot coding agent will:
+        1. Analyze the current visual design
+        2. Implement the requested changes in CSS/HTML
+        3. Test the changes across different browsers and devices
+        4. Ensure accessibility standards are maintained
+        5. Provide screenshots of the changes
+        6. Notify you when complete
+        
+        **Expected completion time:** 1-3 hours depending on complexity
+        
+        **Note:** Screenshots will be provided so you can review the changes before they're finalized.

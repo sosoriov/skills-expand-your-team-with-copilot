@@ -1,0 +1,110 @@
+name: 🏫 Add New Activity
+description: Request to add a new extracurricular activity to the system
+title: "[NEW ACTIVITY] "
+labels: ["enhancement", "activity-management"]
+assignees:
+  - Copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a new activity! Please provide all the details below so our Copilot coding agent can add it to the system automatically.
+
+  - type: input
+    id: activity_name
+    attributes:
+      label: Activity Name
+      description: What is the name of the new activity?
+      placeholder: e.g., "Drama Club", "Science Olympiad", "Basketball Team"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Activity Description
+      description: Provide a clear, engaging description of the activity
+      placeholder: e.g., "Learn acting techniques, perform in school plays, and develop stage presence and confidence"
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Activity Category
+      description: What type of activity is this?
+      options:
+        - Sports
+        - Arts
+        - Academic
+        - Community
+        - Technology
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: schedule_day
+    attributes:
+      label: Day(s) of Week
+      description: Which day(s) will this activity meet?
+      placeholder: e.g., "Monday", "Tuesday and Thursday", "Wednesday"
+    validations:
+      required: true
+
+  - type: input
+    id: schedule_time
+    attributes:
+      label: Meeting Time
+      description: What time will the activity meet? (Use standard time format)
+      placeholder: e.g., "3:30 PM - 5:00 PM", "7:00 AM - 8:00 AM"
+    validations:
+      required: true
+
+  - type: input
+    id: max_participants
+    attributes:
+      label: Maximum Participants
+      description: What's the maximum number of students that can participate?
+      placeholder: e.g., "15", "20", "30"
+    validations:
+      required: true
+
+  - type: input
+    id: teacher_sponsor
+    attributes:
+      label: Teacher Sponsor
+      description: Which teacher will sponsor/supervise this activity?
+      placeholder: e.g., "Ms. Rodriguez", "Mr. Chen"
+
+  - type: textarea
+    id: additional_requirements
+    attributes:
+      label: Additional Requirements or Notes
+      description: Any special requirements, equipment needs, or other important information?
+      placeholder: e.g., "Requires art supplies", "Students must have permission slip", "Meets in computer lab"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have provided all necessary information for this activity
+          required: true
+        - label: I have approval from school administration to add this activity
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens next?
+        
+        Once you submit this issue, a Copilot coding agent will:
+        1. Review the provided information
+        2. Add the activity to the backend database
+        3. Ensure it appears properly on the website
+        4. Test the registration functionality
+        5. Update you when complete
+        
+        **Expected completion time:** 1-2 hours during business hours

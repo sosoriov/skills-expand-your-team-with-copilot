@@ -1,0 +1,105 @@
+name: ❓ Other Request
+description: For requests that don't fit the other categories
+title: "[OTHER] "
+labels: ["question"]
+assignees:
+  - Copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If your request doesn't fit into our other categories, please provide detailed information below. Our Copilot coding agent will review and determine the best approach.
+
+  - type: textarea
+    id: request_summary
+    attributes:
+      label: Request Summary
+      description: Briefly describe what you need
+      placeholder: e.g., "Need help understanding how to...", "Want to integrate with external system", "Have a complex multi-part request"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed_description
+    attributes:
+      label: Detailed Description
+      description: Provide a comprehensive explanation of your request
+      placeholder: Explain the full context, what you're trying to achieve, any constraints or requirements, and why existing options don't meet your needs
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request_category
+    attributes:
+      label: Best Category Match
+      description: Which category does this most closely relate to?
+      options:
+        - Activity management
+        - User interface/design
+        - Technical/system integration
+        - Reporting/data analysis
+        - Security/permissions
+        - Performance/optimization
+        - Training/education
+        - Policy/procedure
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How soon do you need this addressed?
+      options:
+        - Urgent - Needed within 24 hours
+        - High - Needed within a week
+        - Medium - Needed within a month
+        - Low - No specific timeline
+    validations:
+      required: true
+
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success Criteria
+      description: How will we know when this request has been successfully completed?
+      placeholder: e.g., "Teachers can easily do X", "System provides Y functionality", "Problem Z is resolved"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context_info
+    attributes:
+      label: Additional Context
+      description: Any other information that would help us understand and address this request
+      placeholder: e.g., "Current workarounds being used", "Similar requests from other users", "Related issues or constraints"
+
+  - type: checkboxes
+    id: complexity
+    attributes:
+      label: Complexity Assessment
+      options:
+        - label: This might require changes to multiple parts of the system
+        - label: This might need approval from school administration
+        - label: This might require external tools or integrations
+        - label: This might affect data privacy or security
+        - label: I'm not sure about the technical complexity
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens next?
+        
+        Since this is a general request, a Copilot coding agent will:
+        1. Analyze your request to understand the requirements
+        2. Determine if it fits into one of our standard categories
+        3. Research the technical feasibility and approach
+        4. Either implement the solution or provide guidance on next steps
+        5. May ask follow-up questions if clarification is needed
+        6. Update you with progress and completion
+        
+        **Expected response time:** 1-3 hours for initial analysis
+        **Implementation time:** Varies greatly depending on complexity
+        
+        **Note:** Complex or unusual requests may be broken down into smaller, more manageable issues.

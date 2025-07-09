@@ -1,0 +1,123 @@
+name: ✏️ Modify Existing Activity
+description: Request changes to an existing activity (schedule, capacity, description, etc.)
+title: "[MODIFY ACTIVITY] "
+labels: ["enhancement", "activity-management"]
+assignees:
+  - Copilot
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need to update an existing activity? Provide the details below and our Copilot coding agent will make the changes automatically.
+
+  - type: dropdown
+    id: activity_name
+    attributes:
+      label: Activity to Modify
+      description: Which activity needs to be changed?
+      options:
+        - Chess Club
+        - Programming Class
+        - Math Competition Team
+        - Debate Team
+        - Weekend Robotics Workshop
+        - Manga Maniacs
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: activity_name_other
+    attributes:
+      label: Other Activity Name
+      description: If you selected "Other" above, please specify the activity name
+      placeholder: e.g., "Art Club", "Drama Club"
+
+  - type: checkboxes
+    id: changes_needed
+    attributes:
+      label: What needs to be changed?
+      description: Select all that apply
+      options:
+        - label: Activity description
+        - label: Schedule (day and/or time)
+        - label: Maximum number of participants
+        - label: Activity name
+        - label: Remove the activity entirely
+
+  - type: textarea
+    id: new_description
+    attributes:
+      label: New Description
+      description: If changing the description, provide the new text here
+      placeholder: e.g., "Updated description of what students will learn and do in this activity"
+
+  - type: input
+    id: new_schedule_day
+    attributes:
+      label: New Day(s) of Week
+      description: If changing the schedule, what are the new day(s)?
+      placeholder: e.g., "Monday", "Tuesday and Thursday", "Wednesday"
+
+  - type: input
+    id: new_schedule_time
+    attributes:
+      label: New Meeting Time
+      description: If changing the time, what's the new meeting time?
+      placeholder: e.g., "3:30 PM - 5:00 PM", "7:00 AM - 8:00 AM"
+
+  - type: input
+    id: new_max_participants
+    attributes:
+      label: New Maximum Participants
+      description: If changing capacity, what's the new maximum number?
+      placeholder: e.g., "15", "20", "30"
+
+  - type: input
+    id: new_activity_name
+    attributes:
+      label: New Activity Name
+      description: If renaming the activity, what's the new name?
+      placeholder: e.g., "Advanced Chess Club", "Competitive Programming"
+
+  - type: textarea
+    id: reason_for_change
+    attributes:
+      label: Reason for Change
+      description: Why is this change needed? This helps ensure we implement it correctly.
+      placeholder: e.g., "Teacher availability changed", "Need to accommodate more students", "Curriculum update"
+    validations:
+      required: true
+
+  - type: textarea
+    id: special_instructions
+    attributes:
+      label: Special Instructions
+      description: Any specific requirements or considerations for this change?
+      placeholder: e.g., "Need to notify currently enrolled students", "Wait until after winter break"
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have authority to make these changes to this activity
+          required: true
+        - label: If students are currently enrolled, I understand they may need to be notified
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## What happens next?
+        
+        Once you submit this issue, a Copilot coding agent will:
+        1. Locate the specified activity in the system
+        2. Apply the requested changes
+        3. Preserve existing student enrollments (unless removing the activity)
+        4. Test that the changes work correctly
+        5. Notify you when complete
+        
+        **Expected completion time:** 30-60 minutes during business hours
+        
+        **Note:** If removing an activity entirely, all student enrollments will be lost. Consider whether you want to export enrollment data first.
